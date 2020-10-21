@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        GeometryReader { geometry in
+            NavigationView {
+                RefreshScrollView(width: geometry.size.width, height: geometry.size.height).navigationTitle("I pull every night: App")
+            }
+        }
     }
 }
 
