@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PullToRefreshView: View {
-    @ObservedObject var manager: DataManager
+    @StateObject var manager: DataManager
     
     var body: some View {
         List(manager.dataModel) { note in
